@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>RPCホーム</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="top"></div>
+
+  <div class="layout">
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+      RPCホーム
+    </header>
+
+    <!-- サイドメニュー -->
+    <aside class="sidebar">
+      <ul class="menu">
+        <li><a href="#design">カード</a></li>
+        <li><a href="#form">フォーム</a></li>
+        <li><a href="#flex">FlexBox</a></li>
+        <li><a href="#card">レスポンシブ</a></li>
+      </ul>
+    </aside>
+
+    <!-- メイン -->
+    <main class="main">
+
+      <!-- デザイン -->
+      <section id="design">
+        <h2>デザイン</h2>
+
+        <div class="card">
+          <h3>カード</h3>
+          <p>margin / border / padding / shadow / radius</p>
+
+          <div class="btn-group">
+            <button class="primary">色のあるボタン</button>
+            <button class="ghost">色のないボタン</button>
+            <button disabled>無効ボタン</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- フォーム -->
+      <section id="form">
+        <h2>フォーム</h2>
+
+        <h3>名前</h3>
+        <label>
+          <input type="text" placeholder="入力してください">
+        </label>
+
+        <h3>性別</h3>
+        <label>
+          <input type="radio" name="gender"> 男性
+        </label>
+        <label>
+          <input type="radio" name="gender"> 女性
+        </label>
+        <label>
+          <input type="radio" name="gender"> その他
+        </label>
+
+        <h3>都道府県</h3>
+        <label>
+          <select name="prefecture">
+            <option value="">選択してください</option>
+            <option value="tokyo">東京都</option>
+            <option value="kanagawa">神奈川県</option>
+            <option value="osaka">大阪府</option>
+          </select>
+        </label>
+
+        <h3>完了課題</h3>
+        <label>
+          <input type="checkbox"> HTML
+        </label>
+        <label>
+          <input type="checkbox"> CSS
+        </label>
+        <label>
+          <input type="checkbox"> JavaScript
+        </label>
+
+        <h3>自己紹介</h3>
+        <div class="form-group">
+          <textarea
+            id="introduction"
+            name="introduction"
+            cols="100"
+            rows="10"
+            placeholder="自己紹介を入力してください"
+          ></textarea>
+        </div>
+      </section>
+
+      <!-- Flex -->
+      <section id="flex">
+        <h2>FlexBox</h2>
+
+        <div class="flex-list">
+          <div>#CSS</div>
+          <div>#html</div>
+          <div>#javascript</div>
+          <div>#Flexbox</div>
+          <div>#Grid</div>
+          <div>#MediaQueries</div>
+          <div>#ContainerQueries</div>          
+        </div>
+      </section>
+
+      <!-- カードレイアウト -->
+      <section id="card">
+        <h2>カードレイアウトでレスポンシブ</h2>
+
+        <div class="cards">
+          <div class="card-box">Card A</div>
+          <div class="card-box">Card B</div>
+          <div class="card-box">Card C</div>
+          <div class="card-box">Card D</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <span class="footer-copy">© RPC</span>
+      <a href="#top" class="footer-top">ページ上部へ</a>
+    </footer>
+
+  </div>
+</body>
+</html>

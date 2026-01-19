@@ -1,0 +1,142 @@
+/* =====================
+   全体レイアウト（Grid）
+===================== */
+.layout {
+  display: grid;
+  grid-template:
+    "header header" auto
+    "side   main"   1fr
+    "footer footer" auto
+    / 240px 1fr;
+  min-height: 100vh;
+}
+
+.site-header {
+  grid-area: header;
+  background: #fca5a5;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: side;
+  background: #bfdbfe;
+  padding: 20px;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+}
+
+.site-footer {
+  grid-area: footer;
+  background: #fde68a;
+  padding: 20px;
+}
+
+/* =====================
+   メニュー
+===================== */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #000;
+}
+
+.menu a::after {
+  content: ">>";
+  position: absolute;
+  right: 10px;
+}
+
+.menu a:hover {
+  background: #e0f2fe;
+}
+
+/* =====================
+   フォーム
+===================== */
+input:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #2563eb;
+}
+
+.choice {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.choice:has(input:checked) {
+  background: #d1fae5;
+}
+
+/* =====================
+   FlexBox
+===================== */
+.flex-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.flex-box .item {
+  padding: 20px;
+  background: #e5e7eb;
+}
+
+.flex-box .item:first-child {
+  background: #93c5fd;
+}
+
+/* =====================
+   カードレイアウト
+===================== */
+.cards {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  padding: 20px;
+  background: #f3f4f6;
+}
+
+/* =====================
+   レスポンシブ
+===================== */
+@media (width < 1080px) {
+  .layout {
+    grid-template:
+      "header" auto
+      "side" auto
+      "main" 1fr
+      "footer" auto
+      / 1fr;
+  }
+}
+
+@media (width < 720px) {
+  .cards {
+    flex-direction: column;
+  }
+}

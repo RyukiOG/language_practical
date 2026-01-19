@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+ /* flex-direction: row; */
+  flex-direction: column;
+}
+
+.item {
+  width: 200px;
+  border: 1px solid #000; /* 各アイテムの周囲に黒い1pxの枠線を付ける（視覚的に区切るため） */
+}
